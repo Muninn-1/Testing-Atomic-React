@@ -1,0 +1,76 @@
+@value fonts: '../../../constants/styles/fonts/fonts.css';
+@value primaryFont from fonts;
+
+@value hexColors: '../../../constants/styles/colors/hexa/colors.css';
+@value hex-very-light-pink, hex-dark-black, hex-dark-gray, hex-sky-blue, hex-windows-blue from hexColors;
+
+@value rgb-dark-gray from '../../../constants/styles/colors/rgb/colors.css';
+
+@value styles: '../../../constants/styles/styles.css';
+@value defaultPadding, defaultWidth, primaryBorderRadius, mediumOpacity, lowOpacity from styles;
+
+.opaque {
+    color: hex-dark-black;
+    background-color: hex-sky-blue;
+    border: 1px solid hex-sky-blue;
+}
+
+.opaque:active {
+    border-color: rgba(rgb-dark-gray, mediumOpacity) !important;
+}
+
+.transparent {
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.transparent:active {
+    background-color: hex-very-light-pink;
+}
+
+.button {
+    font-family: primaryFont;
+    text-transform: uppercase;
+    padding: 0.25em 1em;
+    border-radius: primaryBorderRadius;
+    cursor: pointer;
+}
+
+.anchor {
+    composes: button;
+    text-decoration: none;
+}
+
+.link {
+    composes: button;
+}
+
+.button:hover, .anchor:hover {
+    box-shadow: 2px 2px 2px rgba(rgb-dark-gray, mediumOpacity);
+}
+
+.button:focus {
+    outline: none;
+}
+
+
+/* Disabled CSS */
+.opaque:disabled {
+    background-color: hex-very-light-pink;
+    border: 1px solid hex-very-light-pink;
+    box-shadow: none;
+    color: hex-dark-gray;
+    cursor: default;
+}
+
+.transparent:disabled {
+    border: 1px solid hex-very-light-pink;
+    color: hex-dark-gray;
+    cursor: default;
+    box-shadow: none;
+}
+
+.transparent:disabled:hover {
+    background-color: transparent;
+}

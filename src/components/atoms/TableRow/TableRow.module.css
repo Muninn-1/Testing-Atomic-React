@@ -1,0 +1,11 @@
+@value hex-very-light-pink from '../../../constants/styles/colors/hexa/colors.css';
+
+.solid {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.double {
+    border-bottom-width: 2px;
+    border-bottom-style: double;
+}

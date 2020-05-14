@@ -1,0 +1,22 @@
+/*
+
+WARNING : DON'T MANUALLY ADD COLORS IN THIS FILE!!
+-> Add them in 'constants/styles/colors/colors.json'
+-> Run script 'yarn generate-color-files!!
+
+*/
+
+@value hex-white: #ffffff;
+@value hex-dark-black: #151e2d;
+@value hex-pinkish-red: #ff1541;
+@value hex-light-pinkish-red: #ff476a;
+@value hex-very-light-pink: #e9e9e9;
+@value hex-light-grey-blue: #a6adbb;
+@value hex-windows-blue: #337ab7;
+@value hex-sky-blue: #4287f5;
+@value hex-dark-gray: #676767;
+@value hex-light-gray: #878787;
+@value hex-deep-green: #026860;
+@value hex-not-so-deep-green: #027C72;
+@value hex-green-xplosion: #09EE1E;
+@value hex-pale-orange: #F1951E;

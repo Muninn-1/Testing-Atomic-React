@@ -1,0 +1,15 @@
+export {default as arc} from './arc.svg';
+export {default as atomicDesign} from './atomic-design.svg';
+export {default as close} from './close.svg';
+export {default as copy} from './copy.svg';
+export {default as dist} from './dist.svg';
+export {default as docs} from './docs.svg';
+export {default as facebook} from './facebook.svg';
+export {default as github} from './github.svg';
+export {default as google} from './google.svg';
+export {default as heart} from './heart.svg';
+export {default as jest} from './jest.svg';
+export {default as reactRouter} from './react-router.svg';
+export {default as react} from './react.svg';
+export {default as redux} from './redux.svg';
+export {default as webpack} from './webpack.svg';

@@ -1,0 +1,58 @@
+@value fonts: '../../../constants/styles/fonts/fonts.css';
+@value secondaryFont from fonts;
+
+@value hexColors: '../../../constants/styles/colors/hexa/colors.css';
+@value hex-very-light-pink, hex-dark-black from hexColors;
+
+@value rgbColors: '../../../constants/styles/colors/rgb/colors.css';
+@value rgb-very-light-pink, rgb-sky-blue, rgb-pinkish-red from rgbColors;
+
+@value styles: '../../../constants/styles/styles.css';
+@value defaultPadding, defaultWidth, primaryBorderRadius, mediumOpacity, lowOpacity from styles;
+
+.default {
+    border: 1px solid hex-very-light-pink;
+    border-radius: primaryBorderRadius;
+    color: hex-dark-black;
+    font-family: secondaryFont;
+    padding:  0.25em 0.5em;
+}
+
+.default:disabled {
+    background-color: rgba(rgb-very-light-pink, lowOpacity);
+}
+
+.default:read-only {
+    background-color: rgba(rgb-sky-blue, lowOpacity);
+}
+
+.default:focus {
+    outline: none;
+}
+
+.transparent {
+    border: none;
+    background-color: rgba(rgb-very-light-pink, mediumOpacity);
+}
+
+.invalid {
+    color: darkred;
+    background-color: rgba(rgb-pinkish-red, lowOpacity);
+    border-color: darkred;
+}
+
+.textarea {
+    composes: default;
+    min-height: 5vh;
+    max-height: 15vh;
+    min-width: defaultWidth;
+    max-width: calc(defaultWidth * 3);
+}
+
+.select {
+    border-radius: primaryBorderRadius;
+}
+
+.radio, .checkbox {
+    margin: 0;
+}

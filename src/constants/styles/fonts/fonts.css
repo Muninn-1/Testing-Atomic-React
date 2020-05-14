@@ -1,0 +1,20 @@
+@value primaryFont: Alternate Gothic;
+@value secondaryFont: Unica77;
+
+/* @font-face rules */
+
+@font-face {
+    font-family: primaryFont;
+    src: url('../../../assets/fonts/AlternateGothic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: secondaryFont;
+    src: url('../../../assets/fonts/Unica77/Unica77LLTT-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: secondaryFont;
+    src: url('../../../assets/fonts/Unica77/Unica77LLTT-Bold.ttf') format('truetype');
+    font-weight: bold;
+}

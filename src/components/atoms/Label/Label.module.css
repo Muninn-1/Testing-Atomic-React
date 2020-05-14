@@ -1,0 +1,16 @@
+@value hexColors: '../../../constants/styles/colors/hexa/colors.css';
+@value hex-very-light-pink, hex-dark-black from hexColors;
+
+@value rgbColors: '../../../constants/styles/colors/rgb/colors.css';
+@value rgb-very-light-pink from rgbColors;
+
+@value styles: '../../../constants/styles/styles.css';
+@value defaultPadding, defaultWidth, primaryBorderRadius, mediumOpacity, lowOpacity from styles;
+
+.default {
+    color: hex-dark-black;
+}
+
+.invalid {
+    color: darkred;
+}

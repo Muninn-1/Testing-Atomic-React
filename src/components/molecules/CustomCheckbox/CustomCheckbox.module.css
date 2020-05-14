@@ -1,0 +1,205 @@
+@value hexColors: '../../../constants/styles/colors/hexa/colors.css';
+@value hex-dark-black, hex-dark-gray, hex-light-gray, hex-light-grey-blue, hex-sky-blue, hex-very-light-pink from hexColors;
+@value hex-windows-blue, hex-green-xplosion, hex-not-so-deep-green, hex-deep-green from hexColors;
+
+@value styles: '../../../constants/styles/styles.css';
+@value primaryBorderRadius, tertiaryBorderRadius, circleRadius, lowestOpacity, highestOpacity from styles;
+
+.default {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.default label {
+    padding-left: 0.5em;
+}
+
+.default input {
+    position: absolute;
+    opacity: 0;
+}
+
+.default input + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+}
+
+.light, .dark, .switch {
+    composes: default;
+}
+
+
+/* Light box CSS */
+.light input + label:before {
+    content: "";
+    margin: 0px 10px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background: hex-sky-blue;
+    border-radius: primaryBorderRadius;
+}
+
+.light input:hover + label:before {
+    background: hex-deep-green;
+}
+
+.light input:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.light input:checked + label:before {
+    background: hex-green-xplosion;
+}
+
+/* Dark box CSS */
+.dark input + label:before {
+    content: "";
+    margin: 0px 10px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background: hex-dark-black;
+    border-radius: primaryBorderRadius;
+}
+
+.dark input:hover + label:before {
+    background: hex-dark-gray;
+}
+
+.dark input:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.dark input:checked + label:before {
+    background: hex-dark-black;
+}
+
+/* Switch box CSS */
+.switch input + label:before {
+    content: "";
+    margin: 0px 10px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 20px;
+    background-color: hex-dark-gray;
+    border-radius: tertiaryBorderRadius;
+    transition-property: background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
+
+.switch input:hover + label:before {
+    background: hex-light-gray;
+}
+
+.switch input:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.switch input:checked + label:before {
+    background: hex-deep-green;
+    transition-property: background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
+
+/* Disabled checkbox */
+.default input:disabled + label {
+    color: hex-very-light-pink;
+    cursor: auto;
+}
+
+.default input:disabled + label:before {
+    box-shadow: none;
+    background: hex-very-light-pink;
+}
+
+
+/* Check symbol maker ( light / dark ) */
+@keyframes fadeInRotation {
+    from {
+        opacity: 0;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+
+.light input:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-name: fadeInRotation;
+    animation-fill-mode: forwards;
+    margin: 0px 10px;
+}
+
+.dark input:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-name: fadeInRotation;
+    animation-fill-mode: forwards;
+    margin: 0px 10px;
+}
+
+
+/* Switch dot maker */
+.switch input + label:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background-color: white;
+    border: 2px solid white;
+    width: 12px;
+    height: 12px;
+    border-radius: circleRadius;
+    transition-property: left, background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+    margin: 0px 10px;
+}
+
+.switch input:checked + label:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 42px;
+    background-color: hex-deep-green;
+    border: 2px solid white;
+    width: 12px;
+    height: 12px;
+    border-radius: circleRadius;
+    transition-property: left, background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.switch input:checked:hover + label:before {
+    background-color: hex-not-so-deep-green;
+}

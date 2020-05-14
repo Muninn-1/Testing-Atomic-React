@@ -1,0 +1,22 @@
+/*
+
+WARNING : DON'T MANUALLY ADD COLORS IN THIS FILE!!
+-> Add them in 'constants/styles/colors/colors.json'
+-> Run script 'yarn generate-color-files!!
+
+*/
+
+@value rgb-white: 255, 255, 255;
+@value rgb-dark-black: 21, 30, 45;
+@value rgb-pinkish-red: 255, 21, 65;
+@value rgb-light-pinkish-red: 255, 71, 106;
+@value rgb-very-light-pink: 233, 233, 233;
+@value rgb-light-grey-blue: 166, 173, 187;
+@value rgb-windows-blue: 51, 122, 183;
+@value rgb-sky-blue: 66, 135, 245;
+@value rgb-dark-gray: 103, 103, 103;
+@value rgb-light-gray: 135, 135, 135;
+@value rgb-deep-green: 2, 104, 96;
+@value rgb-not-so-deep-green: 2, 124, 114;
+@value rgb-green-xplosion: 9, 238, 30;
+@value rgb-pale-orange: 241, 149, 30;

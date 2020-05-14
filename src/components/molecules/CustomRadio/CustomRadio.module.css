@@ -1,0 +1,133 @@
+@value hexColors: '../../../constants/styles/colors/hexa/colors.css';
+@value hex-dark-black, hex-dark-gray,hex-light-grey-blue, hex-sky-blue, hex-very-light-pink from hexColors;
+@value hex-windows-blue, hex-green-xplosion, hex-deep-green from hexColors;
+
+@value styles: '../../../constants/styles/styles.css';
+@value circleRadius, lowestOpacity, highestOpacity from styles;
+
+.default {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.default label {
+    padding-left: 0.5em;
+}
+
+.default input {
+    position: absolute;
+    opacity: 0;
+}
+
+.default input + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+}
+
+.light, .dark {
+    composes: default;
+}
+
+
+/* Light box CSS */
+.light input + label:before {
+    content: "";
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background: hex-sky-blue;
+    border-radius: circleRadius;
+}
+
+.light input:hover + label:before {
+    background: hex-deep-green;
+}
+
+.light input:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.light input:checked + label:before {
+    background: hex-green-xplosion;
+}
+
+/* Dark box CSS */
+.dark input + label:before {
+    content: "";
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background: hex-dark-black;
+    border-radius: circleRadius;
+}
+
+.dark input:hover + label:before {
+    background: hex-dark-gray;
+}
+
+.dark input:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.dark input:checked + label:before {
+    background: hex-dark-black;
+}
+
+
+/* Disabled checkbox */
+.default input:disabled + label {
+    color: hex-very-light-pink;
+    cursor: auto;
+}
+
+.default input:disabled + label:before {
+    box-shadow: none;
+    background: hex-very-light-pink;
+}
+
+
+/* Check symbol maker */
+@keyframes fillCircle {
+    from {
+        opacity: 0;
+        width: 4px;
+        height: 4px;
+        left: 8px;
+        top: 8px;
+    }
+    to {
+        opacity: 1;
+        width: 12px;
+        height: 12px;
+        left: 4px;
+        top: 4px;
+    }
+}
+
+.light input:checked + label:after {
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: circleRadius;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-name: fillCircle;
+    animation-fill-mode: forwards;
+}
+
+.dark input:checked + label:after {
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: circleRadius;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-name: fillCircle;
+    animation-fill-mode: forwards;
+}

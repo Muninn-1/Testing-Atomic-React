@@ -1,0 +1,14 @@
+@value colors: '../../../constants/styles/colors/hexa/colors.css';
+@value hex-light-grey-blue from colors;
+
+.container {
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    margin: 5px;
+}
+
+.borderedContainer {
+    composes: container;
+    border: 1px solid hex-light-grey-blue;
+}

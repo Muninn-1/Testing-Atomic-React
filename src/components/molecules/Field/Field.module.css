@@ -1,0 +1,11 @@
+.default {
+    display: flex;
+    composes: default;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.default label {
+    padding-left: 0.5em;
+}

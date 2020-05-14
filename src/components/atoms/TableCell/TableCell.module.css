@@ -1,0 +1,39 @@
+@value fonts: '../../../constants/styles/fonts/fonts.css';
+@value primaryFont, secondaryFont from fonts;
+
+@value hex-dark-black, hex-dark-gray, hex-very-light-pink from '../../../constants/styles/colors/hexa/colors.css';
+
+@value defaultFontSize from '../../../constants/styles/styles.css';
+
+.th {
+    color: hex-dark-black;
+    border-bottom: 2px double hex-very-light-pink;
+    font-size: calc(1.25 * defaultFontSize);
+    font-family: primaryFont;
+    padding: 0.5em;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.th:hover, .th:active {
+    color: hex-dark-gray;
+    cursor: pointer;
+}
+
+.td {
+    color: hex-dark-black;
+    border-bottom: 1px solid hex-very-light-pink;
+    font-size: defaultFontSize;
+    font-family: secondaryFont;
+    padding: 0.5em;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

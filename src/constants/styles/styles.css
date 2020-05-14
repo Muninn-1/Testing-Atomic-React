@@ -1,0 +1,20 @@
+/* WARNING : UPDATE BOTH JS AND CSS FILES */
+
+/* Default values */
+@value defaultFontSize: 15px;
+@value defaultPadding: 5em;
+@value defaultWidth: 10vw;
+@value defaultHeight: 2vh;
+
+/* Border radius ( px ) */
+@value primaryBorderRadius: 5px;
+@value secondaryBorderRadius: 10px;
+@value tertiaryBorderRadius: 50px;
+@value circleRadius: 50%;
+
+/* Opacities ( 0 -> 1 ) */
+@value highestOpacity: 0.8;
+@value highOpacity: 0.7;
+@value mediumOpacity: 0.5;
+@value lowOpacity: 0.3;
+@value lowestOpacity: 0.2;
